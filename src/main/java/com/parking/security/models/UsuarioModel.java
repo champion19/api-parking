@@ -21,13 +21,15 @@ public class UsuarioModel {
     private String password;
     @NotNull
     @ManyToMany
-    @JoinTable(name="usuario_rol",
-            joinColumns = @JoinColumn(name="usuario_id"),
-            inverseJoinColumns = @JoinColumn(name="rol_id"))
+    @JoinTable(name="usuario_rol",joinColumns = @JoinColumn(name="usuario_id")
+            ,inverseJoinColumns = @JoinColumn(name="rol_id"))
     private Set<RolModel> roles = new HashSet<>();
 
+    public UsuarioModel(){
 
-    public UsuarioModel(String nombre, String nombreUsuario, String email, String password) {
+    }
+
+    public UsuarioModel(@NotNull String nombre,@NotNull String nombreUsuario, @NotNull String email, @NotNull String password) {
         this.nombre = nombre;
         this.nombreUsuario = nombreUsuario;
         this.email = email;

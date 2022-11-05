@@ -2,7 +2,6 @@ package com.parking.security.models;
 
 import com.parking.security.enums.RolNombre;
 import com.sun.istack.NotNull;
-
 import javax.persistence.*;
 
 @Entity
@@ -19,6 +18,7 @@ public class RolModel {
     }
 
     public RolModel(RolNombre rolNombre) {
+
         this.rolNombre = rolNombre;
     }
 
