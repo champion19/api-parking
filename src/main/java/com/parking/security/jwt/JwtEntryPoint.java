@@ -12,7 +12,7 @@ import java.io.IOException;
 
 @Component
 public class JwtEntryPoint implements AuthenticationEntryPoint{
-    private final static Logger logger=LoggerFactory.getLogger(JwtEntryPoint.class);
+    private final static Logger logger = LoggerFactory.getLogger(JwtEntryPoint.class);
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
     logger.error("fail in the method commence");

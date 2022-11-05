@@ -1,18 +1,26 @@
 package com.parking.security.dto;
 
+import net.bytebuddy.implementation.bind.annotation.Empty;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
 public class NuevoUsuario {
 @NotBlank
+@NotNull
  private String nombre;
 @NotBlank
+@NotNull
  private String nombreUsuario;
 @Email
+@NotNull
+@NotBlank
  private String email;
 @NotBlank
+@NotNull
  private String password;
  private Set<String> roles=new HashSet<>();
  public String getNombre() {
