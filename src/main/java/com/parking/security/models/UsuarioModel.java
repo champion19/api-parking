@@ -25,7 +25,7 @@ public class UsuarioModel {
             ,inverseJoinColumns = @JoinColumn(name="rol_id"))
     private Set<RolModel> roles = new HashSet<>();
 
-    public UsuarioModel(){
+    public UsuarioModel(String nombre, String nombreUsuario, String email){
 
     }
 
