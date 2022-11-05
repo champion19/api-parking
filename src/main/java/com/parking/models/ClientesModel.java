@@ -7,11 +7,9 @@ import java.io.Serializable;//devuelve la tabla como un Json.
 import java.util.List;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "clientes")
 public class ClientesModel implements Serializable {
-
     private final static long serialVersionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,8 +17,8 @@ public class ClientesModel implements Serializable {
     private String email;
     private String numero;
 
-    @JsonIgnoreProperties({"usuario"})
-    @OneToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL,mappedBy = "usuario")
+    @JsonIgnoreProperties({"cliente"})
+    @OneToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL,mappedBy = "cliente")
     private List<VehiculoModel> vehiculos;
 
     public Long getId() {

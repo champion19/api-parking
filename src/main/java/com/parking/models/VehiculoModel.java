@@ -18,7 +18,7 @@ public class VehiculoModel implements Serializable {
 
     @JsonIgnoreProperties({"vehiculos"})
     @ManyToOne(fetch = FetchType.LAZY)
-    private ClientesModel usuario;
+    private ClientesModel cliente;
 
     public long getId() {
         return id;
@@ -45,10 +45,10 @@ public class VehiculoModel implements Serializable {
     }
 
     public ClientesModel getUsuario() {
-        return usuario;
+        return cliente;
     }
 
-    public void setUsuario(ClientesModel usuario) {
-        this.usuario = usuario;
+    public void setUsuario(ClientesModel cliente) {
+        this.cliente = cliente;
     }
 }

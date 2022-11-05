@@ -13,10 +13,12 @@ import java.util.Optional;
 public class RolService {
     @Autowired
     RolRepository rolRepository;
-
-
     public Optional<RolModel> getByRolNombre(RolNombre rolNombre){
         return rolRepository.findByRolNombre(rolNombre);
+    }
+
+    public void save(RolModel rolModel){
+        rolRepository.save(rolModel);
     }
 }
 

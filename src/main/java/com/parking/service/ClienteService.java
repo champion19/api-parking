@@ -1,32 +1,32 @@
 package com.parking.service;
 
 import com.parking.models.ClientesModel;
-import com.parking.repositories.UsuarioRepository;
+import com.parking.repositories.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class UsuarioService {
+public class ClienteService {
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    private ClienteRepository clienteRepository;
 
     public List<ClientesModel> obtenerUsuarios(){
-        return (List<ClientesModel>) usuarioRepository.findAll();
+        return (List<ClientesModel>) clienteRepository.findAll();
     }
 
     public ClientesModel guardarUsuario(ClientesModel usuario){
-        return usuarioRepository.save(usuario);
+        return clienteRepository.save(usuario);
     }
 
     public ClientesModel obtenerPorId(Long id){
-        return usuarioRepository.findById(id).orElse(null);
+        return clienteRepository.findById(id).orElse(null);
     }
 
     public boolean eliminarUsuario(Long id){
         try{
-            usuarioRepository.deleteById(id);
+            clienteRepository.deleteById(id);
             return true;
         }catch(Exception err){
             return false;

@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 @Entity
-@Table(name = "users")
+@Table(name = "usuario")
 public class UsuarioModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
